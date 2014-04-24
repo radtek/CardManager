@@ -1,0 +1,50 @@
+// CardOCX.idl : IDL source for CardOCX
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CardOCX.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(CB9772BE-7669-47EE-90AE-A1EB45F02CE8),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICardObject : IDispatch{
+	[id(1)] HRESULT OCX_Init([out,retval] LONG* retValue);
+	[id(8)] HRESULT OCX_About([out,retval] BSTR* message);
+	[id(9)] HRESULT OCX_ReadTrack([in] SHORT trackNo, [out,retval] BSTR* trackInfo);
+	[id(10)] HRESULT OCX_WriteTrack([in] SHORT trackNo, [in] BSTR* trackInfo, [out,retval] LONG* retValue);
+	[id(11)] HRESULT OCX_GetLastError([out,retval] BSTR* message);
+	[id(12)] HRESULT OCX_EjectCard([out,retval] LONG* retValue);
+	[id(13)] HRESULT OCX_SetCoercivity([in] BSTR* coercivity, [out,retval] LONG* retValue);
+};
+[
+	uuid(E6078CCC-6FAA-4670-AABB-3CB3D918E3B7),
+	version(1.0),
+]
+library CardOCXLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(B4A99C75-0B07-4839-84EA-F5C72758A81C)		
+	]
+	dispinterface _ICardObjectEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(038090D9-4C74-4A87-BA43-12C48C0D29FA)		
+	]
+	coclass CardObject
+	{
+		[default] interface ICardObject;
+		[default, source] dispinterface _ICardObjectEvents;
+	};
+};
+

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardInterface", "CardInterface\CardInterface.vcxproj", "{7CA48011-2E9B-46C3-AA26-19FE65A5C302}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardManager", "CardManager\CardManager.vcxproj", "{B7B12EEB-7582-4CB9-8267-A882ACC89A76}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302} = {7CA48011-2E9B-46C3-AA26-19FE65A5C302}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardInterfaceTest", "CardInterfaceTest\CardInterfaceTest.vcxproj", "{9CE2BC5B-B6D7-4BB4-AB1C-45A31B332CA9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302} = {7CA48011-2E9B-46C3-AA26-19FE65A5C302}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CardOCX", "CardOCX\CardOCX.vcxproj", "{BD0F3B84-3A2E-4006-A50B-AD0D1DB77073}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302} = {7CA48011-2E9B-46C3-AA26-19FE65A5C302}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302}.Debug|Win32.Build.0 = Debug|Win32
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302}.Release|Win32.ActiveCfg = Release|Win32
+		{7CA48011-2E9B-46C3-AA26-19FE65A5C302}.Release|Win32.Build.0 = Release|Win32
+		{B7B12EEB-7582-4CB9-8267-A882ACC89A76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B7B12EEB-7582-4CB9-8267-A882ACC89A76}.Debug|Win32.Build.0 = Debug|Win32
+		{B7B12EEB-7582-4CB9-8267-A882ACC89A76}.Release|Win32.ActiveCfg = Release|Win32
+		{B7B12EEB-7582-4CB9-8267-A882ACC89A76}.Release|Win32.Build.0 = Release|Win32
+		{9CE2BC5B-B6D7-4BB4-AB1C-45A31B332CA9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9CE2BC5B-B6D7-4BB4-AB1C-45A31B332CA9}.Debug|Win32.Build.0 = Debug|Win32
+		{9CE2BC5B-B6D7-4BB4-AB1C-45A31B332CA9}.Release|Win32.ActiveCfg = Release|Win32
+		{9CE2BC5B-B6D7-4BB4-AB1C-45A31B332CA9}.Release|Win32.Build.0 = Release|Win32
+		{BD0F3B84-3A2E-4006-A50B-AD0D1DB77073}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD0F3B84-3A2E-4006-A50B-AD0D1DB77073}.Debug|Win32.Build.0 = Debug|Win32
+		{BD0F3B84-3A2E-4006-A50B-AD0D1DB77073}.Release|Win32.ActiveCfg = Release|Win32
+		{BD0F3B84-3A2E-4006-A50B-AD0D1DB77073}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

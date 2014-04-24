@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {038090D9-4C74-4A87-BA43-12C48C0D29FA} = s 'CardObject Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{E6078CCC-6FAA-4670-AABB-3CB3D918E3B7}'
+			Version = s '1.0'
+		}
+	}
+}
